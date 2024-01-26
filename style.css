@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    height: 100vh;
+    width: 100%;
+
+    .back {
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+
+        & img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .top {
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* background-color: #333; */
+        pointer-events: none;
+
+        .workingArea {
+            height: 100vh;
+            width: 80%;
+            max-width: 1600px;
+            /* border: 1px solid red; */
+            margin: 0 auto;
+            position: relative;
+
+            .nav {
+                width: 100%;
+                padding: 40px 0;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                & a {
+                    pointer-events: all;
+                    color: #fff;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                }
+
+                .navleft,
+                .navright {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 60px;
+                    align-items: center;
+
+                    & img {
+                        height: 60px;
+                    }
+                }
+            }
+
+            .hero {
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translate(0, -50%);
+                display: flex;
+                justify-content: space-between;
+
+                .heroleft {
+                    min-width: 50%;
+
+                    .elem {
+                        /* 9vw */
+                        height: 7.5vw;
+                        /* background-color: red; */
+                        overflow: hidden;
+                        position: relative;
+
+                        & h1 {
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            font-family: 'Kajiro';
+                            font-weight: 100;
+                            color: #fff;
+                            /* 11vw */
+                            font-size: 9vw;
+                            text-transform: uppercase;
+                            /* line-height: 0.9; */
+
+                            &:nth-child(1) {
+                                top: 0;
+                            }
+                        }
+                    }
+
+                    & button {
+                        pointer-events: all;
+                        cursor: pointer;
+                        padding: 0.5vw 2vw;
+                        font-size: 2.6vw;
+                        font-family: 'kajiro';
+                        margin-top: 2vw;
+                    }
+                }
+
+                .heroright {
+                    width: 19%;
+                    /* background-color: yellow; */
+                    display: flex;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    color: #fff;
+
+                    .imageDiv {
+                        width: 90%;
+                        height: 150px;
+                        margin-top: 20px;
+                        margin-bottom: 60px;
+                        background-image: url(https://images.unsplash.com/photo-1517241938558-898c3afe02c8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fG1vZGVsJTIwZ2lybHxlbnwwfDB8MHx8fDA%3D);
+                        background-size: cover;
+                        background-position: center;
+                    }
+
+                    & p {
+                        text-align: right;
+                        font-size: 12px;
+                        font-weight: 300;
+
+                        &:nth-child(3) {
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
